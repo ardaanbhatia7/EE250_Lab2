@@ -12,9 +12,9 @@ def main():
     # TODO: Get user input and send it to the server using your TCP socket
     # TODO: Receive a response from the server and close the TCP connection
 
-
-    host = "127.0.0.1"  
-    port = 8080         
+  
+    host = "172.20.10.3"
+    port = 5500         
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((host, port))
