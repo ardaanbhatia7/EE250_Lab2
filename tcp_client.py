@@ -11,6 +11,18 @@ def main():
     # TODO: Create a socket and connect it to the server at the designated IP and port
     # TODO: Get user input and send it to the server using your TCP socket
     # TODO: Receive a response from the server and close the TCP connection
+
+
+    host = "127.0.0.1"  
+    port = 8080         
+
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.connect((host, port))
+        user_input = input("Enter your input: ")
+        s.sendall(user_input.encode())
+        data = s.recv(1024)
+    print("Recieved from the server: ", data)
+
     pass
 
 
